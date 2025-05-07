@@ -1,0 +1,6 @@
+# Output directories of preprocessing operation
+/processed-data/
+/temp/
+
+# Temporary working directories
+/reference-code/
