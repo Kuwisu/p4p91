@@ -75,7 +75,8 @@ class FileProcessor:
                  output_dir: str = "processed-data",
                  label_ids: list[str] = None,
                  calculate_mean_std: bool = True,
-                 partition_ratios: tuple[float, float, ...] = (.8, .1, .1)):
+                 partition_ratios: tuple[float, float, ...] = (.8, .1, .1)
+                 ):
         if label_ids is None:
             label_ids = ["01", "03", "04", "05", "07"]
 

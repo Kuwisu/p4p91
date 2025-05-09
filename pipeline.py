@@ -21,9 +21,12 @@ output_dir = "processed-data"
 label_ids = ["01", "03", "04", "05", "07"]
 # If False, uses [0.5], [0.5] for normalise mean and standard deviation
 use_dataset_mean_std = True
+keep_processed_data = True
 
 # %% Training parameters
+# Exclude the third value in the tuple to bypass testing
 train_val_test = (.8, .1, .1)
+weight_decay = 0
 model = ResNet50(num_classes=len(label_ids))
 
 # %% Pipeline
@@ -39,3 +42,14 @@ if use_dataset_mean_std:
 else:
     std = np.array([0.5, 0.5, 0.5])
     mean = np.array([0.5, 0.5, 0.5])
+
+# %% Training
+
+# %% Testing
+# Only do testing if a testing set was partitioned
+if len(train_val_test) == 3:
+    pass
+
+# %% Finalising
+if not keep_processed_data and os.path.exists(output_dir):
+    shutil.rmtree(output_dir)
