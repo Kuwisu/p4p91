@@ -1,7 +1,6 @@
 
 import os
 
-import glob
 import numpy as np
 import torch
 import torch.nn as nn
@@ -41,22 +40,19 @@ class ModelTraining:
                 std=std,)
         ])
 
-        self.train_loader = DataLoader(
-            torchvision.datasets.ImageFolder(train_path, transform=self.transforms),
-            batch_size=train_batch_size, shuffle=True
-        )
-        self.val_loader = DataLoader(
-            torchvision.datasets.ImageFolder(val_path, transform=self.transforms),
-            batch_size=val_batch_size, shuffle=True
-        )
+        train_dataset = torchvision.datasets.ImageFolder(train_path, transform=self.transforms)
+        self.train_size = len(train_dataset)
+
+        val_dataset = torchvision.datasets.ImageFolder(val_path, transform=self.transforms)
+        self.val_size = len(val_dataset)
+
+        self.train_loader = DataLoader(train_dataset, batch_size=train_batch_size, shuffle=True)
+        self.val_loader = DataLoader(val_dataset, batch_size=val_batch_size, shuffle=True)
 
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.model = model.to(self.device)
         optimizer = Adam(self.model.parameters(), lr=learn_rate, weight_decay=weight_decay)
         loss_fn = nn.CrossEntropyLoss()
-
-        train_count = len(glob.glob(os.path.join(train_path, "*")))
-        self.val_count = len(glob.glob(os.path.join(val_path, "*")))
 
         for epoch in range(num_epochs):
             self.model.train()
@@ -77,8 +73,8 @@ class ModelTraining:
 
                 train_acc += int(torch.sum(prediction == labels))
 
-            train_acc = train_acc / train_count
-            train_loss = train_loss / train_count
+            train_acc = train_acc / self.train_size
+            train_loss = train_loss / self.train_size
 
             print("Epoch " + str(epoch) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc))
             self.evaluate_model()
