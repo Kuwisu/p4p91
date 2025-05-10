@@ -29,13 +29,16 @@ keep_processed_data = True
 train_path = input_dir + "/train"
 val_path = input_dir + "/val"
 test_path = input_dir + "/test"
+model_output_dir = "model-out"
+model_output_name = "p4p91-emotion-resnet"
 # Exclude the third value in the tuple to bypass testing
 train_val_test = (.8, .1, .1)
 weight_decay = 0
 learn_rate = 0.001
 num_epochs = 100
 size = (224, 224)
-train_val_batch_size = (64, 64)
+train_batch_size = 32
+val_batch_size = 32
 model = ResNet50(num_classes=len(label_ids))
 
 # %% Pipeline
@@ -53,9 +56,10 @@ else:
     mean = np.array([0.5, 0.5, 0.5])
 
 # %% Training
-model_training = ModelTraining(model, train_path=train_path, val_path=val_path, learn_rate=learn_rate,
+model_training = ModelTraining(model, output_dir=output_dir,
+                               train_path=train_path, val_path=val_path, learn_rate=learn_rate,
                                weight_decay=weight_decay, num_epochs=num_epochs, mean=mean, std=std,
-                               size=size, batch_size=train_val_batch_size)
+                               size=size, train_batch_size=train_batch_size, val_batch_size=val_batch_size)
 
 # %% Testing
 # Only do testing if a testing set was partitioned

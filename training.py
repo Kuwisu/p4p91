@@ -15,6 +15,8 @@ from sklearn.metrics import accuracy_score, classification_report, confusion_mat
 class ModelTraining:
     def __init__(self,
                  model,
+                 output_dir: str = "model-out",
+                 output_name: str = "p4p91-emotion-model.pth",
                  train_path: str = "processed-data/test",
                  val_path: str = "processed-data/val",
                  learn_rate: float = 0.001,
@@ -22,7 +24,8 @@ class ModelTraining:
                  mean: np.array = None,
                  std: np.array = None,
                  size: tuple[int, int] = (224, 224),
-                 batch_size: tuple[int, int] = (32, 32),
+                 train_batch_size: int = 32,
+                 val_batch_size: int = 32,
                  weight_decay: float = 1e-5
                  ):
         if mean is None:
@@ -40,11 +43,11 @@ class ModelTraining:
 
         self.train_loader = DataLoader(
             torchvision.datasets.ImageFolder(train_path, transform=self.transforms),
-            batch_size=batch_size[0], shuffle=True
+            batch_size=train_batch_size, shuffle=True
         )
         self.val_loader = DataLoader(
             torchvision.datasets.ImageFolder(val_path, transform=self.transforms),
-            batch_size=batch_size[1], shuffle=True
+            batch_size=val_batch_size, shuffle=True
         )
 
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -79,6 +82,10 @@ class ModelTraining:
 
             print("Epoch " + str(epoch) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc))
             self.evaluate_model()
+
+        os.makedirs(output_dir, exist_ok=True)
+        save_path = os.path.join(output_dir, output_name)
+        torch.save(self.model.state_dict(), save_path)
 
     # Define Evaluation Function
     def evaluate_model(self):
