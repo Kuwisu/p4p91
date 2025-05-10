@@ -4,6 +4,8 @@ from resnetmodel import *
 
 import numpy as np
 
+from training import ModelTraining
+
 # %% Spectrogram parameters
 sr = 22050
 n_fft = 2048
@@ -24,9 +26,16 @@ use_dataset_mean_std = True
 keep_processed_data = True
 
 # %% Training parameters
+train_path = input_dir + "/train"
+val_path = input_dir + "/val"
+test_path = input_dir + "/test"
 # Exclude the third value in the tuple to bypass testing
 train_val_test = (.8, .1, .1)
 weight_decay = 0
+learn_rate = 0.001
+num_epochs = 100
+size = (224, 224)
+train_val_batch_size = (64, 64)
 model = ResNet50(num_classes=len(label_ids))
 
 # %% Pipeline
@@ -44,6 +53,9 @@ else:
     mean = np.array([0.5, 0.5, 0.5])
 
 # %% Training
+model_training = ModelTraining(model, train_path=train_path, val_path=val_path, learn_rate=learn_rate,
+                               weight_decay=weight_decay, num_epochs=num_epochs, mean=mean, std=std,
+                               size=size, batch_size=train_val_batch_size)
 
 # %% Testing
 # Only do testing if a testing set was partitioned

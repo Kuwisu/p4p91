@@ -57,7 +57,7 @@ class SpectrogramProcessor:
                                                   hop_length=self.hop_length, win_length=self.win_length,
                                                   n_mels=self.n_mels, fmax=self.fmax)
         log_mel_spec = librosa.power_to_db(mel_spec, ref=np.max)
-        plt.figure(figsize=(4, 4))
+        plt.figure(figsize=(10, 4))
         librosa.display.specshow(log_mel_spec, sr=self.sr, hop_length=self.hop_length, cmap=self.cmap)
 
         save_path = os.path.join(save_dir, os.path.splitext(os.path.basename(input_path))[0] + ".png")

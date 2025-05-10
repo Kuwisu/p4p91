@@ -5,12 +5,12 @@ import glob
 import numpy as np
 import torch
 import torch.nn as nn
-from torchvision.datasets import ImageFolder
 from torchvision.transforms import transforms
 from torch.utils.data import DataLoader
 from torch.optim import Adam
-from torch.autograd import Variable
 import torchvision
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, balanced_accuracy_score
+
 
 class ModelTraining:
     def __init__(self,
@@ -22,7 +22,7 @@ class ModelTraining:
                  mean: np.array = None,
                  std: np.array = None,
                  size: tuple[int, int] = (224, 224),
-                 batch_size: tuple[int, int, ...] = (32, 32),
+                 batch_size: tuple[int, int] = (32, 32),
                  weight_decay: float = 1e-5
                  ):
         if mean is None:
@@ -38,11 +38,11 @@ class ModelTraining:
                 std=std,)
         ])
 
-        train_loader = DataLoader(
+        self.train_loader = DataLoader(
             torchvision.datasets.ImageFolder(train_path, transform=self.transforms),
             batch_size=batch_size[0], shuffle=True
         )
-        val_loader = DataLoader(
+        self.val_loader = DataLoader(
             torchvision.datasets.ImageFolder(val_path, transform=self.transforms),
             batch_size=batch_size[1], shuffle=True
         )
@@ -53,16 +53,15 @@ class ModelTraining:
         loss_fn = nn.CrossEntropyLoss()
 
         train_count = len(glob.glob(os.path.join(train_path, "*")))
-        val_count = len(glob.glob(os.path.join(val_path, "*")))
+        self.val_count = len(glob.glob(os.path.join(val_path, "*")))
 
         for epoch in range(num_epochs):
             self.model.train()
             train_acc = 0.0
             train_loss = 0.0
 
-            for images, labels in train_loader:
-                images = images.to(self.device)
-                labels = labels.to(self.device)
+            for images, labels in self.train_loader:
+                images, labels = images.to(self.device), labels.to(self.device)
 
                 optimizer.zero_grad()
                 outputs = self.model(images)
@@ -70,12 +69,35 @@ class ModelTraining:
                 loss.backward()
                 optimizer.step()
 
-                train_loss += loss.cpu().data * images.size(0)
-                _, prediction = torch.max(outputs.data, 1)
+                train_loss += loss.cpu().item() * images.size(0)
+                _, prediction = torch.max(outputs, 1)
 
-                train_acc += int(torch.sum(prediction == labels.data))
+                train_acc += int(torch.sum(prediction == labels))
 
             train_acc = train_acc / train_count
             train_loss = train_loss / train_count
 
-            print("Epoch " + str(epoch) + " Train loss: " + str(train_loss) + " Train Accuracy: " + str(train_acc))
+            print("Epoch " + str(epoch) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc))
+            self.evaluate_model()
+
+    # Define Evaluation Function
+    def evaluate_model(self):
+        self.model.eval()
+        y_true = []
+        y_pred = []
+
+        with torch.no_grad():
+            for images, labels in self.val_loader:
+                images, labels = images.to(self.device), labels.to(self.device)
+                outputs = self.model(images)
+                predictions = torch.argmax(outputs, dim=1)
+
+                y_true.extend(labels.cpu().numpy())
+                y_pred.extend(predictions.cpu().numpy())
+
+        # Print evaluation metrics
+        print("\nModel Evaluation:")
+        print(f"Standard Accuracy: {accuracy_score(y_true, y_pred):.4f}")
+        print(f"Balanced Accuracy: {balanced_accuracy_score(y_true, y_pred):.4f}")
+        print("Classification Report:\n", classification_report(y_true, y_pred))
+        print("Confusion Matrix:\n", confusion_matrix(y_true, y_pred))
