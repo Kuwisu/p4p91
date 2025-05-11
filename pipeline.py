@@ -10,9 +10,9 @@ from training import ModelTraining
 sr = 22050
 n_fft = 2048
 hop_length = 512
-win_length = None
+win_length = 2048
 n_mels = 80
-fmax = None
+fmax = 11025
 window = 'hann'
 cmap = 'gray'
 
@@ -26,9 +26,9 @@ use_dataset_mean_std = True
 keep_processed_data = True
 
 # %% Training parameters
-train_path = input_dir + "/train"
-val_path = input_dir + "/val"
-test_path = input_dir + "/test"
+train_path = output_dir + "/train"
+val_path = output_dir + "/val"
+test_path = output_dir + "/test"
 model_output_dir = "model-out"
 model_output_name = "p4p91-emotion-resnet"
 # Exclude the third value in the tuple to bypass testing

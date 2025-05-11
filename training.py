@@ -102,5 +102,5 @@ class ModelTraining:
         print("\nModel Evaluation:")
         print(f"Standard Accuracy: {accuracy_score(y_true, y_pred):.4f}")
         print(f"Balanced Accuracy: {balanced_accuracy_score(y_true, y_pred):.4f}")
-        print("Classification Report:\n", classification_report(y_true, y_pred))
+        print("Classification Report:\n", classification_report(y_true, y_pred, zero_division=0))
         print("Confusion Matrix:\n", confusion_matrix(y_true, y_pred))
