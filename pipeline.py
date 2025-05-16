@@ -29,6 +29,7 @@ keep_processed_data = True
 train_path = output_dir + "/train"
 val_path = output_dir + "/val"
 model_output_dir = "model-out"
+training_log_name = "training-log.txt"
 model_output_name = "p4p91-emotion-resnet"
 weight_decay = 0
 learn_rate = 0.001
@@ -53,10 +54,11 @@ else:
     mean = np.array([0.5, 0.5, 0.5])
 
 # %% Training
-model_training = ModelTraining(model, output_dir=model_output_dir,
-                               train_path=train_path, val_path=val_path, learn_rate=learn_rate,
-                               weight_decay=weight_decay, num_epochs=num_epochs, mean=mean, std=std,
-                               size=size, train_batch_size=train_batch_size, val_batch_size=val_batch_size)
+model_training = ModelTraining(model, output_dir=model_output_dir, model_name=model_output_name,
+                               log_name=training_log_name, train_path=train_path, val_path=val_path,
+                               learn_rate=learn_rate, weight_decay=weight_decay, num_epochs=num_epochs,
+                               train_batch_size=train_batch_size, val_batch_size=val_batch_size,
+                               mean=mean, std=std, size=size)
 
 # %% Finalising
 if not keep_processed_data and os.path.exists(output_dir):

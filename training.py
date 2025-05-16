@@ -15,7 +15,8 @@ class ModelTraining:
     def __init__(self,
                  model,
                  output_dir: str = "model-out",
-                 output_name: str = "p4p91-emotion-model.pth",
+                 log_name: str = "training-log.txt",
+                 model_name: str = "p4p91-emotion-model.pth",
                  train_path: str = "processed-data/test",
                  val_path: str = "processed-data/val",
                  learn_rate: float = 0.001,
@@ -32,8 +33,12 @@ class ModelTraining:
         if std is None:
             std = np.array([0.5, 0.5, 0.5])
 
+        # Establish an output directory and create a file to record console output
         self.output_dir = output_dir
         os.makedirs(self.output_dir, exist_ok=True)
+
+        log_name = os.path.join(self.output_dir, log_name)
+        open(log_name, "x").close()
 
         self.transforms = transforms.Compose([
             transforms.Resize(size),
@@ -82,10 +87,18 @@ class ModelTraining:
             train_acc = train_acc / self.train_size
             train_loss = train_loss / self.train_size
 
-            print("Epoch " + str(epoch+1) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc))
-            self.evaluate_model(epoch+1)
+            train_log = "Epoch " + str(epoch+1) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc)
+            eval_log = self.evaluate_model(epoch+1)
 
-        save_path = os.path.join(output_dir, output_name)
+            print(train_log)
+            print(eval_log)
+
+            file = open(log_name, "a")
+            file.write(train_log)
+            file.write(eval_log)
+            file.close()
+
+        save_path = os.path.join(output_dir, model_name)
         torch.save(self.model.state_dict(), save_path)
 
     # Define Evaluation Function
@@ -103,11 +116,14 @@ class ModelTraining:
                 y_true.extend(labels.cpu().numpy())
                 y_pred.extend(predictions.cpu().numpy())
 
-        # Print evaluation metrics
-        print("Classification Report:\n", classification_report(y_true, y_pred, zero_division=0,
-                                                                target_names=self.text_labels))
+        # Prepare and save confusion matrix
         cm = confusion_matrix(y_true, y_pred, labels=self.numeric_labels)
         ConfusionMatrixDisplay(cm, display_labels=self.text_labels).plot()
         plt.title(f"Epoch {epoch} Confusion Matrix")
         plt.savefig(os.path.join(self.output_dir, f"confusion-matrix-{epoch}.png"))
         plt.close()
+
+        # Return an evaluation log
+        eval_log = "Classification Report:\n" + classification_report(
+            y_true, y_pred, zero_division=0, target_names=self.text_labels)
+        return eval_log
