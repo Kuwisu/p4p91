@@ -1,6 +1,7 @@
 
 import os
 
+from matplotlib import pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
@@ -8,8 +9,7 @@ from torchvision.transforms import transforms
 from torch.utils.data import DataLoader
 from torch.optim import Adam
 import torchvision
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, balanced_accuracy_score
-
+from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 
 class ModelTraining:
     def __init__(self,
@@ -32,6 +32,9 @@ class ModelTraining:
         if std is None:
             std = np.array([0.5, 0.5, 0.5])
 
+        self.output_dir = output_dir
+        os.makedirs(self.output_dir, exist_ok=True)
+
         self.transforms = transforms.Compose([
             transforms.Resize(size),
             transforms.ToTensor(),
@@ -45,6 +48,9 @@ class ModelTraining:
 
         val_dataset = torchvision.datasets.ImageFolder(val_path, transform=self.transforms)
         self.val_size = len(val_dataset)
+
+        self.text_labels = train_dataset.classes
+        self.numeric_labels = np.arange(len(self.text_labels))
 
         self.train_loader = DataLoader(train_dataset, batch_size=train_batch_size, shuffle=True)
         self.val_loader = DataLoader(val_dataset, batch_size=val_batch_size, shuffle=True)
@@ -76,15 +82,14 @@ class ModelTraining:
             train_acc = train_acc / self.train_size
             train_loss = train_loss / self.train_size
 
-            print("Epoch " + str(epoch) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc))
-            self.evaluate_model()
+            print("Epoch " + str(epoch+1) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc))
+            self.evaluate_model(epoch+1)
 
-        os.makedirs(output_dir, exist_ok=True)
         save_path = os.path.join(output_dir, output_name)
         torch.save(self.model.state_dict(), save_path)
 
     # Define Evaluation Function
-    def evaluate_model(self):
+    def evaluate_model(self, epoch):
         self.model.eval()
         y_true = []
         y_pred = []
@@ -99,8 +104,10 @@ class ModelTraining:
                 y_pred.extend(predictions.cpu().numpy())
 
         # Print evaluation metrics
-        print("\nModel Evaluation:")
-        print(f"Standard Accuracy: {accuracy_score(y_true, y_pred):.4f}")
-        print(f"Balanced Accuracy: {balanced_accuracy_score(y_true, y_pred):.4f}")
-        print("Classification Report:\n", classification_report(y_true, y_pred, zero_division=0))
-        print("Confusion Matrix:\n", confusion_matrix(y_true, y_pred))
+        print("Classification Report:\n", classification_report(y_true, y_pred, zero_division=0,
+                                                                target_names=self.text_labels))
+        cm = confusion_matrix(y_true, y_pred, labels=self.numeric_labels)
+        ConfusionMatrixDisplay(cm, display_labels=self.text_labels).plot()
+        plt.title(f"Epoch {epoch} Confusion Matrix")
+        plt.savefig(os.path.join(self.output_dir, f"confusion-matrix-{epoch}.png"))
+        plt.close()

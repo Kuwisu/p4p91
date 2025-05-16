@@ -1,0 +1,699 @@
+Epoch 1 Loss: 1.7879995440327845 Accuracy: 0.27180232558139533
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       1.00      0.26      0.41        39
+     disgust       0.65      0.28      0.39        39
+       happy       0.20      0.05      0.08        39
+     neutral       0.17      0.90      0.28        20
+         sad       0.39      0.31      0.34        39
+
+    accuracy                           0.30       176
+   macro avg       0.48      0.36      0.30       176
+weighted avg       0.51      0.30      0.30       176
+
+Epoch 2 Loss: 1.3337822320849397 Accuracy: 0.3997093023255814
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.29      0.95      0.44        39
+     disgust       0.60      0.08      0.14        39
+       happy       0.50      0.08      0.13        39
+     neutral       0.24      0.35      0.29        20
+         sad       0.71      0.13      0.22        39
+
+    accuracy                           0.31       176
+   macro avg       0.47      0.32      0.24       176
+weighted avg       0.49      0.31      0.24       176
+
+Epoch 3 Loss: 1.2219955422157465 Accuracy: 0.5116279069767442
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       1.00      0.03      0.05        39
+     disgust       1.00      0.03      0.05        39
+       happy       0.23      1.00      0.37        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.00      0.00      0.00        39
+
+    accuracy                           0.23       176
+   macro avg       0.45      0.21      0.09       176
+weighted avg       0.49      0.23      0.10       176
+
+Epoch 4 Loss: 1.1665576945903688 Accuracy: 0.5174418604651163
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.44      0.90      0.59        39
+     disgust       0.80      0.31      0.44        39
+       happy       0.55      0.28      0.37        39
+     neutral       0.30      0.85      0.45        20
+         sad       0.83      0.13      0.22        39
+
+    accuracy                           0.45       176
+   macro avg       0.59      0.49      0.42       176
+weighted avg       0.62      0.45      0.41       176
+
+Epoch 5 Loss: 1.1426155040430468 Accuracy: 0.5334302325581395
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.25      1.00      0.40        39
+     disgust       0.35      0.15      0.21        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.00      0.00      0.00        20
+         sad       1.00      0.03      0.05        39
+
+    accuracy                           0.26       176
+   macro avg       0.32      0.24      0.13       176
+weighted avg       0.35      0.26      0.15       176
+
+Epoch 6 Loss: 1.0480185248130975 Accuracy: 0.561046511627907
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.50      0.62      0.55        39
+     disgust       0.90      0.23      0.37        39
+       happy       0.29      0.82      0.43        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.71      0.13      0.22        39
+
+    accuracy                           0.40       176
+   macro avg       0.48      0.36      0.31       176
+weighted avg       0.53      0.40      0.35       176
+
+Epoch 7 Loss: 0.9392313485921815 Accuracy: 0.6133720930232558
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.00      0.00      0.00        39
+     disgust       0.23      1.00      0.37        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.25      0.03      0.05        39
+
+    accuracy                           0.23       176
+   macro avg       0.10      0.21      0.08       176
+weighted avg       0.11      0.23      0.09       176
+
+Epoch 8 Loss: 0.9260296239409336 Accuracy: 0.6308139534883721
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.91      0.26      0.40        39
+     disgust       0.75      0.15      0.26        39
+       happy       0.25      0.03      0.05        39
+     neutral       0.19      0.95      0.32        20
+         sad       0.31      0.44      0.37        39
+
+    accuracy                           0.30       176
+   macro avg       0.48      0.36      0.28       176
+weighted avg       0.51      0.30      0.27       176
+
+Epoch 9 Loss: 0.9254517610682997 Accuracy: 0.626453488372093
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.53      0.46      0.49        39
+     disgust       0.83      0.26      0.39        39
+       happy       0.31      0.97      0.47        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.86      0.15      0.26        39
+
+    accuracy                           0.41       176
+   macro avg       0.51      0.37      0.32       176
+weighted avg       0.56      0.41      0.36       176
+
+Epoch 10 Loss: 0.9143929994383524 Accuracy: 0.6177325581395349
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.81      0.67      0.73        39
+     disgust       0.64      0.74      0.69        39
+       happy       0.41      0.92      0.57        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.75      0.23      0.35        39
+
+    accuracy                           0.57       176
+   macro avg       0.52      0.51      0.47       176
+weighted avg       0.58      0.57      0.52       176
+
+Epoch 11 Loss: 0.7188064774801565 Accuracy: 0.7063953488372093
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       1.00      0.08      0.14        39
+     disgust       0.52      0.95      0.67        39
+       happy       0.58      0.36      0.44        39
+     neutral       0.80      0.20      0.32        20
+         sad       0.47      0.87      0.61        39
+
+    accuracy                           0.52       176
+   macro avg       0.67      0.49      0.44       176
+weighted avg       0.66      0.52      0.45       176
+
+Epoch 12 Loss: 0.7105037278907244 Accuracy: 0.7223837209302325
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.34      0.97      0.51        39
+     disgust       0.83      0.38      0.53        39
+       happy       0.32      0.28      0.30        39
+     neutral       0.50      0.10      0.17        20
+         sad       0.89      0.21      0.33        39
+
+    accuracy                           0.42       176
+   macro avg       0.58      0.39      0.37       176
+weighted avg       0.59      0.42      0.39       176
+
+Epoch 13 Loss: 0.6507240589274916 Accuracy: 0.7209302325581395
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.00      0.00      0.00        39
+     disgust       0.83      0.49      0.61        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.31      0.25      0.28        20
+         sad       0.26      0.92      0.41        39
+
+    accuracy                           0.34       176
+   macro avg       0.28      0.33      0.26       176
+weighted avg       0.28      0.34      0.26       176
+
+Epoch 14 Loss: 0.6102979030720023 Accuracy: 0.751453488372093
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.90      0.23      0.37        39
+     disgust       0.59      0.87      0.70        39
+       happy       0.50      0.15      0.24        39
+     neutral       0.46      0.80      0.58        20
+         sad       0.49      0.77      0.60        39
+
+    accuracy                           0.54       176
+   macro avg       0.59      0.57      0.50       176
+weighted avg       0.60      0.54      0.49       176
+
+Epoch 15 Loss: 0.41213561559832373 Accuracy: 0.8575581395348837
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.52      0.87      0.65        39
+     disgust       0.84      0.41      0.55        39
+       happy       0.46      0.82      0.59        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.70      0.41      0.52        39
+
+    accuracy                           0.56       176
+   macro avg       0.50      0.50      0.46       176
+weighted avg       0.56      0.56      0.51       176
+
+Epoch 16 Loss: 0.47980587149775306 Accuracy: 0.8066860465116279
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.89      0.21      0.33        39
+     disgust       1.00      0.05      0.10        39
+       happy       0.32      0.85      0.46        39
+     neutral       0.25      0.20      0.22        20
+         sad       0.24      0.28      0.26        39
+
+    accuracy                           0.33       176
+   macro avg       0.54      0.32      0.28       176
+weighted avg       0.57      0.33      0.28       176
+
+Epoch 17 Loss: 0.4137557398441226 Accuracy: 0.8488372093023255
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.78      0.74      0.76        39
+     disgust       0.64      0.87      0.74        39
+       happy       0.43      0.85      0.57        39
+     neutral       1.00      0.05      0.10        20
+         sad       1.00      0.21      0.34        39
+
+    accuracy                           0.60       176
+   macro avg       0.77      0.54      0.50       176
+weighted avg       0.75      0.60      0.55       176
+
+Epoch 18 Loss: 0.4354924909597219 Accuracy: 0.8401162790697675
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.90      0.46      0.61        39
+     disgust       0.62      0.90      0.74        39
+       happy       0.52      0.85      0.64        39
+     neutral       0.56      0.45      0.50        20
+         sad       0.65      0.33      0.44        39
+
+    accuracy                           0.61       176
+   macro avg       0.65      0.60      0.59       176
+weighted avg       0.66      0.61      0.59       176
+
+Epoch 19 Loss: 0.4254946847294652 Accuracy: 0.8430232558139535
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.77      0.59      0.67        39
+     disgust       0.85      0.59      0.70        39
+       happy       0.61      0.64      0.62        39
+     neutral       0.42      0.65      0.51        20
+         sad       0.53      0.64      0.58        39
+
+    accuracy                           0.62       176
+   macro avg       0.64      0.62      0.62       176
+weighted avg       0.66      0.62      0.63       176
+
+Epoch 20 Loss: 0.3553659049577491 Accuracy: 0.8880813953488372
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.78      0.54      0.64        39
+     disgust       0.86      0.79      0.83        39
+       happy       0.56      0.64      0.60        39
+     neutral       1.00      0.10      0.18        20
+         sad       0.52      0.87      0.65        39
+
+    accuracy                           0.64       176
+   macro avg       0.74      0.59      0.58       176
+weighted avg       0.71      0.64      0.62       176
+
+Epoch 21 Loss: 0.2665595578592877 Accuracy: 0.8982558139534884
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.57      0.92      0.71        39
+     disgust       0.77      0.77      0.77        39
+       happy       0.49      0.54      0.51        39
+     neutral       0.67      0.50      0.57        20
+         sad       0.88      0.36      0.51        39
+
+    accuracy                           0.63       176
+   macro avg       0.67      0.62      0.61       176
+weighted avg       0.67      0.63      0.62       176
+
+Epoch 22 Loss: 0.21917255118835804 Accuracy: 0.9229651162790697
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.93      0.36      0.52        39
+     disgust       0.60      0.97      0.75        39
+       happy       0.69      0.23      0.35        39
+     neutral       0.48      0.60      0.53        20
+         sad       0.50      0.77      0.61        39
+
+    accuracy                           0.59       176
+   macro avg       0.64      0.59      0.55       176
+weighted avg       0.66      0.59      0.55       176
+
+Epoch 23 Loss: 0.25912525764731476 Accuracy: 0.9055232558139535
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       1.00      0.44      0.61        39
+     disgust       0.63      0.92      0.75        39
+       happy       0.57      0.10      0.17        39
+     neutral       0.23      0.90      0.37        20
+         sad       0.53      0.23      0.32        39
+
+    accuracy                           0.48       176
+   macro avg       0.59      0.52      0.44       176
+weighted avg       0.63      0.48      0.45       176
+
+Epoch 24 Loss: 0.2464272268982821 Accuracy: 0.9200581395348837
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.86      0.46      0.60        39
+     disgust       0.92      0.59      0.72        39
+       happy       0.36      0.97      0.52        39
+     neutral       0.43      0.15      0.22        20
+         sad       0.44      0.18      0.25        39
+
+    accuracy                           0.51       176
+   macro avg       0.60      0.47      0.46       176
+weighted avg       0.62      0.51      0.49       176
+
+Epoch 25 Loss: 0.31329248810923377 Accuracy: 0.8880813953488372
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.78      0.74      0.76        39
+     disgust       0.78      0.79      0.78        39
+       happy       0.67      0.51      0.58        39
+     neutral       0.50      0.10      0.17        20
+         sad       0.51      0.85      0.63        39
+
+    accuracy                           0.65       176
+   macro avg       0.65      0.60      0.59       176
+weighted avg       0.66      0.65      0.63       176
+
+Epoch 26 Loss: 0.16495611934467805 Accuracy: 0.9433139534883721
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.92      0.62      0.74        39
+     disgust       0.80      0.85      0.82        39
+       happy       0.66      0.64      0.65        39
+     neutral       0.60      0.75      0.67        20
+         sad       0.63      0.74      0.68        39
+
+    accuracy                           0.72       176
+   macro avg       0.72      0.72      0.71       176
+weighted avg       0.74      0.72      0.72       176
+
+Epoch 27 Loss: 0.14394323163947395 Accuracy: 0.9476744186046512
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.85      0.56      0.68        39
+     disgust       0.67      0.95      0.79        39
+       happy       0.86      0.31      0.45        39
+     neutral       0.46      0.55      0.50        20
+         sad       0.51      0.74      0.60        39
+
+    accuracy                           0.63       176
+   macro avg       0.67      0.62      0.60       176
+weighted avg       0.69      0.63      0.62       176
+
+Epoch 28 Loss: 0.1946673599439998 Accuracy: 0.9316860465116279
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.88      0.54      0.67        39
+     disgust       0.71      0.90      0.80        39
+       happy       0.50      0.79      0.61        39
+     neutral       0.67      0.70      0.68        20
+         sad       0.80      0.41      0.54        39
+
+    accuracy                           0.66       176
+   macro avg       0.71      0.67      0.66       176
+weighted avg       0.72      0.66      0.66       176
+
+Epoch 29 Loss: 0.12565798269108283 Accuracy: 0.9563953488372093
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.55      0.90      0.68        39
+     disgust       0.85      0.44      0.58        39
+       happy       0.44      0.82      0.57        39
+     neutral       1.00      0.15      0.26        20
+         sad       0.69      0.28      0.40        39
+
+    accuracy                           0.56       176
+   macro avg       0.70      0.52      0.50       176
+weighted avg       0.67      0.56      0.52       176
+
+Epoch 30 Loss: 0.11736999928604724 Accuracy: 0.9578488372093024
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.81      0.67      0.73        39
+     disgust       0.59      0.97      0.74        39
+       happy       0.71      0.51      0.60        39
+     neutral       0.56      0.75      0.64        20
+         sad       0.84      0.54      0.66        39
+
+    accuracy                           0.68       176
+   macro avg       0.70      0.69      0.67       176
+weighted avg       0.72      0.68      0.68       176
+
+Epoch 31 Loss: 0.14235527345607446 Accuracy: 0.9549418604651163
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.56      0.92      0.70        39
+     disgust       0.93      0.33      0.49        39
+       happy       0.62      0.54      0.58        39
+     neutral       0.50      0.60      0.55        20
+         sad       0.65      0.67      0.66        39
+
+    accuracy                           0.61       176
+   macro avg       0.65      0.61      0.59       176
+weighted avg       0.67      0.61      0.60       176
+
+Epoch 32 Loss: 0.0957739987345629 Accuracy: 0.9694767441860465
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.79      0.69      0.74        39
+     disgust       0.72      0.87      0.79        39
+       happy       0.52      0.77      0.62        39
+     neutral       0.83      0.50      0.62        20
+         sad       0.76      0.49      0.59        39
+
+    accuracy                           0.68       176
+   macro avg       0.73      0.66      0.67       176
+weighted avg       0.71      0.68      0.68       176
+
+Epoch 33 Loss: 0.18407466617781063 Accuracy: 0.9433139534883721
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.66      0.59      0.62        39
+     disgust       0.65      0.82      0.73        39
+       happy       0.57      0.67      0.61        39
+     neutral       0.88      0.35      0.50        20
+         sad       0.63      0.62      0.62        39
+
+    accuracy                           0.64       176
+   macro avg       0.68      0.61      0.62       176
+weighted avg       0.65      0.64      0.63       176
+
+Epoch 34 Loss: 0.2388960240885269 Accuracy: 0.9142441860465116
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.65      0.77      0.71        39
+     disgust       0.90      0.23      0.37        39
+       happy       0.37      0.69      0.48        39
+     neutral       0.45      0.75      0.57        20
+         sad       0.29      0.10      0.15        39
+
+    accuracy                           0.48       176
+   macro avg       0.53      0.51      0.45       176
+weighted avg       0.54      0.48      0.44       176
+
+Epoch 35 Loss: 0.16832596704710362 Accuracy: 0.9418604651162791
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       1.00      0.31      0.47        39
+     disgust       0.68      0.82      0.74        39
+       happy       0.50      0.15      0.24        39
+     neutral       1.00      0.15      0.26        20
+         sad       0.36      0.95      0.52        39
+
+    accuracy                           0.51       176
+   macro avg       0.71      0.48      0.45       176
+weighted avg       0.68      0.51      0.47       176
+
+Epoch 36 Loss: 0.15012877794025942 Accuracy: 0.9520348837209303
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.70      0.82      0.75        39
+     disgust       0.59      0.87      0.70        39
+       happy       0.72      0.46      0.56        39
+     neutral       0.45      0.75      0.57        20
+         sad       0.86      0.31      0.45        39
+
+    accuracy                           0.63       176
+   macro avg       0.66      0.64      0.61       176
+weighted avg       0.69      0.63      0.61       176
+
+Epoch 37 Loss: 0.14043214237100857 Accuracy: 0.9476744186046512
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.81      0.64      0.71        39
+     disgust       0.75      0.85      0.80        39
+       happy       0.49      0.64      0.56        39
+     neutral       0.42      0.75      0.54        20
+         sad       0.64      0.23      0.34        39
+
+    accuracy                           0.61       176
+   macro avg       0.62      0.62      0.59       176
+weighted avg       0.64      0.61      0.59       176
+
+Epoch 38 Loss: 0.07698792500724626 Accuracy: 0.9767441860465116
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.76      0.72      0.74        39
+     disgust       0.78      0.74      0.76        39
+       happy       0.65      0.67      0.66        39
+     neutral       0.46      0.85      0.60        20
+         sad       0.64      0.41      0.50        39
+
+    accuracy                           0.66       176
+   macro avg       0.66      0.68      0.65       176
+weighted avg       0.68      0.66      0.66       176
+
+Epoch 39 Loss: 0.08128145928386339 Accuracy: 0.9709302325581395
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.49      0.85      0.62        39
+     disgust       0.69      0.62      0.65        39
+       happy       0.47      0.72      0.57        39
+     neutral       0.83      0.25      0.38        20
+         sad       0.88      0.18      0.30        39
+
+    accuracy                           0.55       176
+   macro avg       0.67      0.52      0.50       176
+weighted avg       0.65      0.55      0.52       176
+
+Epoch 40 Loss: 0.1272065435904403 Accuracy: 0.9622093023255814
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.89      0.62      0.73        39
+     disgust       0.78      0.79      0.78        39
+       happy       0.57      0.69      0.63        39
+     neutral       0.48      0.55      0.51        20
+         sad       0.62      0.62      0.62        39
+
+    accuracy                           0.66       176
+   macro avg       0.67      0.65      0.65       176
+weighted avg       0.69      0.66      0.67       176
+
+Epoch 41 Loss: 0.07692782723799695 Accuracy: 0.9723837209302325
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.96      0.67      0.79        39
+     disgust       0.76      0.87      0.81        39
+       happy       0.65      0.51      0.57        39
+     neutral       0.46      0.55      0.50        20
+         sad       0.59      0.74      0.66        39
+
+    accuracy                           0.68       176
+   macro avg       0.68      0.67      0.67       176
+weighted avg       0.71      0.68      0.68       176
+
+Epoch 42 Loss: 0.12312785793788904 Accuracy: 0.9549418604651163
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.57      0.79      0.67        39
+     disgust       0.84      0.67      0.74        39
+       happy       0.72      0.59      0.65        39
+     neutral       0.53      0.50      0.51        20
+         sad       0.65      0.67      0.66        39
+
+    accuracy                           0.66       176
+   macro avg       0.66      0.64      0.65       176
+weighted avg       0.68      0.66      0.66       176
+
+Epoch 43 Loss: 0.13060928471819605 Accuracy: 0.9520348837209303
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.61      0.87      0.72        39
+     disgust       0.65      0.79      0.71        39
+       happy       0.71      0.31      0.43        39
+     neutral       0.50      0.20      0.29        20
+         sad       0.53      0.64      0.58        39
+
+    accuracy                           0.60       176
+   macro avg       0.60      0.56      0.54       176
+weighted avg       0.61      0.60      0.57       176
+
+Epoch 44 Loss: 0.11227420344948769 Accuracy: 0.9607558139534884
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.86      0.64      0.74        39
+     disgust       0.75      0.92      0.83        39
+       happy       0.57      0.62      0.59        39
+     neutral       0.67      0.60      0.63        20
+         sad       0.67      0.67      0.67        39
+
+    accuracy                           0.70       176
+   macro avg       0.70      0.69      0.69       176
+weighted avg       0.71      0.70      0.70       176
+
+Epoch 45 Loss: 0.0672585080096195 Accuracy: 0.9840116279069767
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.92      0.59      0.72        39
+     disgust       0.89      0.79      0.84        39
+       happy       0.62      0.64      0.63        39
+     neutral       0.88      0.35      0.50        20
+         sad       0.49      0.85      0.62        39
+
+    accuracy                           0.68       176
+   macro avg       0.76      0.64      0.66       176
+weighted avg       0.75      0.68      0.68       176
+
+Epoch 46 Loss: 0.039648996850172445 Accuracy: 0.9854651162790697
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.54      0.85      0.66        39
+     disgust       0.81      0.64      0.71        39
+       happy       0.65      0.72      0.68        39
+     neutral       0.73      0.40      0.52        20
+         sad       0.87      0.67      0.75        39
+
+    accuracy                           0.68       176
+   macro avg       0.72      0.65      0.67       176
+weighted avg       0.72      0.68      0.68       176
+
+Epoch 47 Loss: 0.0368863855607721 Accuracy: 0.9869186046511628
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.75      0.69      0.72        39
+     disgust       0.81      0.74      0.77        39
+       happy       0.60      0.38      0.47        39
+     neutral       0.35      0.80      0.48        20
+         sad       0.73      0.62      0.67        39
+
+    accuracy                           0.63       176
+   macro avg       0.65      0.65      0.62       176
+weighted avg       0.68      0.63      0.64       176
+
+Epoch 48 Loss: 0.05910408796829193 Accuracy: 0.9796511627906976
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.81      0.77      0.79        39
+     disgust       0.84      0.82      0.83        39
+       happy       0.72      0.54      0.62        39
+     neutral       0.37      0.70      0.48        20
+         sad       0.68      0.59      0.63        39
+
+    accuracy                           0.68       176
+   macro avg       0.68      0.68      0.67       176
+weighted avg       0.72      0.68      0.69       176
+
+Epoch 49 Loss: 0.0676943618630947 Accuracy: 0.9723837209302325
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       0.57      0.74      0.64        39
+     disgust       0.53      0.79      0.63        39
+       happy       0.55      0.59      0.57        39
+     neutral       0.75      0.15      0.25        20
+         sad       0.75      0.38      0.51        39
+
+    accuracy                           0.57       176
+   macro avg       0.63      0.53      0.52       176
+weighted avg       0.62      0.57      0.55       176
+
+Epoch 50 Loss: 0.1316062828829122 Accuracy: 0.9549418604651163
+Classification Report:
+               precision    recall  f1-score   support
+
+       angry       1.00      0.15      0.27        39
+     disgust       0.95      0.49      0.64        39
+       happy       0.42      0.56      0.48        39
+     neutral       0.40      0.50      0.44        20
+         sad       0.44      0.82      0.57        39
+
+    accuracy                           0.51       176
+   macro avg       0.64      0.51      0.48       176
+weighted avg       0.67      0.51      0.49       176

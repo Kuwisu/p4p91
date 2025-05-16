@@ -32,7 +32,6 @@ class SpectrogramProcessor:
                  hop_length: int = 512,
                  win_length: int = None,
                  n_mels: int = 80,
-                 fmax: float = None,
                  window: str = 'hann',
                  cmap: str = 'gray'):
         self.sr = sr
@@ -40,7 +39,6 @@ class SpectrogramProcessor:
         self.hop_length = hop_length
         self.win_length = win_length
         self.n_mels = n_mels
-        self.fmax = fmax
         self.window = window
         self.cmap = cmap
 
@@ -55,7 +53,7 @@ class SpectrogramProcessor:
         # Generate Mel spectrogram
         mel_spec = librosa.feature.melspectrogram(y=y, sr=self.sr, n_fft=self.n_fft,
                                                   hop_length=self.hop_length, win_length=self.win_length,
-                                                  n_mels=self.n_mels, fmax=self.fmax)
+                                                  n_mels=self.n_mels)
         log_mel_spec = librosa.power_to_db(mel_spec, ref=np.max)
         plt.figure(figsize=(10, 4), frameon=False)
         librosa.display.specshow(log_mel_spec, sr=self.sr, hop_length=self.hop_length, cmap=self.cmap)
@@ -75,7 +73,7 @@ class FileProcessor:
                  output_dir: str = "processed-data",
                  label_ids: list[str] = None,
                  calculate_mean_std: bool = True,
-                 partition_ratios: tuple[float, float, ...] = (.8, .1, .1)
+                 partition_ratios: tuple[float, float] = (.8, .2)
                  ):
         if label_ids is None:
             label_ids = ["01", "03", "04", "05", "07"]
