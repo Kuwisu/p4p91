@@ -118,7 +118,7 @@ class ModelTraining:
 
         # Prepare and save confusion matrix
         cm = confusion_matrix(y_true, y_pred, labels=self.numeric_labels)
-        ConfusionMatrixDisplay(cm, display_labels=self.text_labels).plot()
+        ConfusionMatrixDisplay(cm, display_labels=self.text_labels).plot(cmap='Blues')
         plt.title(f"Epoch {epoch} Confusion Matrix")
         plt.savefig(os.path.join(self.output_dir, f"confusion-matrix-{epoch}.png"))
         plt.close()
