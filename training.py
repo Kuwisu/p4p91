@@ -1,5 +1,6 @@
 
 import os
+from collections import Counter
 
 from matplotlib import pyplot as plt
 import numpy as np
@@ -56,6 +57,10 @@ class ModelTraining:
 
         self.text_labels = train_dataset.classes
         self.numeric_labels = np.arange(len(self.text_labels))
+        label_counts = Counter(train_dataset.targets)
+        class_counts = np.array([label_counts[i] for i in range(len(train_dataset.classes))])
+        class_weights = 1.0 / class_counts
+        class_weights = class_weights / np.sum(class_weights)
 
         self.train_loader = DataLoader(train_dataset, batch_size=train_batch_size, shuffle=True)
         self.val_loader = DataLoader(val_dataset, batch_size=val_batch_size, shuffle=True)
@@ -63,7 +68,7 @@ class ModelTraining:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.model = model.to(self.device)
         optimizer = Adam(self.model.parameters(), lr=learn_rate, weight_decay=weight_decay)
-        loss_fn = nn.CrossEntropyLoss()
+        loss_fn = nn.CrossEntropyLoss(weight=torch.tensor(class_weights, dtype=torch.float32).to(self.device))
 
         for epoch in range(num_epochs):
             self.model.train()
