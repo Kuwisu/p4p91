@@ -8,7 +8,7 @@ import torch
 import torch.nn as nn
 from torchvision.transforms import transforms
 from torch.utils.data import DataLoader
-from torch.optim import Adam
+from torch.optim import Adam, lr_scheduler
 import torchvision
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay
 
@@ -68,6 +68,7 @@ class ModelTraining:
         self.device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
         self.model = model.to(self.device)
         optimizer = Adam(self.model.parameters(), lr=learn_rate, weight_decay=weight_decay)
+        scheduler = lr_scheduler.CosineAnnealingLR(optimizer, num_epochs)
         loss_fn = nn.CrossEntropyLoss(weight=torch.tensor(class_weights, dtype=torch.float32).to(self.device))
 
         for epoch in range(num_epochs):
@@ -89,10 +90,14 @@ class ModelTraining:
 
                 train_acc += int(torch.sum(prediction == labels))
 
+            prev_lr = optimizer.param_groups[0]['lr']
+            scheduler.step()
+            new_lr = optimizer.param_groups[0]['lr']
+
             train_acc = train_acc / self.train_size
             train_loss = train_loss / self.train_size
 
-            train_log = "Epoch " + str(epoch+1) + " Loss: " + str(train_loss) + " Accuracy: " + str(train_acc)
+            train_log = f"Epoch {epoch+1} Loss: {train_loss:.4f} Accuracy: {train_acc:.4f} Learning Rate: {prev_lr:.4f} => {new_lr:.4f}"
             eval_log = self.evaluate_model(epoch+1)
 
             print(train_log)
@@ -129,6 +134,6 @@ class ModelTraining:
         plt.close()
 
         # Return an evaluation log
-        eval_log = "Classification Report:\n" + classification_report(
-            y_true, y_pred, zero_division=0, target_names=self.text_labels)
+        eval_log = f"Classification Report: \n{classification_report(
+            y_true, y_pred, target_names=self.text_labels, zero_division=0)}"
         return eval_log
