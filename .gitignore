@@ -3,4 +3,4 @@
 /temp/
 
 # Temporary working directories
-/reference-code/
+/__pycache__/
