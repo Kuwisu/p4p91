@@ -19,7 +19,8 @@ cmap = 'gray'
 input_dir = "input-data"
 output_dir = "processed-data"
 # View preprocessing.RAVDESS_EMOTION_MAPPING to see options
-label_ids = ["01", "03", "04", "05", "07"]
+# label_ids = ["01", "03", "04", "05", "07"]
+label_ids = ["01", "02", "03", "04", "05", "06", "07", "08"]
 train_val = (.8, .2)
 keep_processed_data = True
 
