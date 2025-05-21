@@ -22,7 +22,7 @@ output_dir = "processed-data"
 label_ids = ["01", "03", "04", "05", "07"]
 train_val = (.8, .2)
 # If False, uses [0.5], [0.5] for normalise mean and standard deviation
-use_dataset_mean_std = True
+use_dataset_mean_std = False
 keep_processed_data = True
 
 # %% Training parameters
@@ -31,7 +31,7 @@ val_path = output_dir + "/val"
 model_output_dir = "model-out"
 training_log_name = "training-log.txt"
 model_output_name = "p4p91-emotion-resnet"
-weight_decay = 1e-4
+weight_decay = 1e-5
 learn_rate = 0.001
 num_epochs = 50
 size = (224, 224)
