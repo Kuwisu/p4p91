@@ -21,8 +21,6 @@ output_dir = "processed-data"
 # View preprocessing.RAVDESS_EMOTION_MAPPING to see options
 label_ids = ["01", "03", "04", "05", "07"]
 train_val = (.8, .2)
-# If False, uses [0.5], [0.5] for normalise mean and standard deviation
-use_dataset_mean_std = False
 keep_processed_data = True
 
 # %% Training parameters
@@ -44,21 +42,13 @@ spectrogram_processor = SpectrogramProcessor(sr=sr, n_fft=n_fft, hop_length=hop_
                                              win_length=win_length, n_mels=n_mels,
                                              window=window, cmap=cmap)
 file_processor = FileProcessor(spectrogram_processor, input_dir=input_dir, output_dir=output_dir, label_ids=label_ids,
-                               calculate_mean_std=use_dataset_mean_std, partition_ratios=train_val)
-
-if use_dataset_mean_std:
-    std = file_processor.std
-    mean = file_processor.mean
-else:
-    std = np.array([0.5, 0.5, 0.5])
-    mean = np.array([0.5, 0.5, 0.5])
+                               partition_ratios=train_val)
 
 # %% Training
 model_training = ModelTraining(model, output_dir=model_output_dir, model_name=model_output_name,
                                log_name=training_log_name, train_path=train_path, val_path=val_path,
                                learn_rate=learn_rate, weight_decay=weight_decay, num_epochs=num_epochs,
-                               train_batch_size=train_batch_size, val_batch_size=val_batch_size,
-                               mean=mean, std=std, size=size)
+                               train_batch_size=train_batch_size, val_batch_size=val_batch_size, size=size)
 
 # %% Finalising
 if not keep_processed_data and os.path.exists(output_dir):

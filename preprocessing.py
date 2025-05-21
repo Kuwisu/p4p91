@@ -72,7 +72,6 @@ class FileProcessor:
                  input_dir: str = "input-data",
                  output_dir: str = "processed-data",
                  label_ids: list[str] = None,
-                 calculate_mean_std: bool = True,
                  partition_ratios: tuple[float, float] = (.8, .2)
                  ):
         if label_ids is None:
@@ -85,9 +84,6 @@ class FileProcessor:
         os.makedirs(midpoint_dir, exist_ok=True)
         os.makedirs(output_dir, exist_ok=True)
 
-        # Initialise arrays for dataset mean and standard deviation calculation
-        num_samples = 0
-        self.mean = np.array([0., 0., 0.])
         images = []
         for file in files:
             if file.endswith(".wav"):
@@ -105,28 +101,6 @@ class FileProcessor:
                         save_path = spectrogram_processor.save_spectrogram(filepath, save_dir)
                         print(f"Saved spectrogram to {save_path}")
 
-                        # Update the mean for each image
-                        if save_path is not None and calculate_mean_std:
-                            num_samples += 1
-                            im = cv2.imread(save_path)
-                            im = cv2.cvtColor(im, cv2.COLOR_BGR2RGB).astype(float) / 255
-                            images.append(im)
-
-                            for j in range(3):
-                                self.mean[j] += np.mean(im[:, :, j])
-
-        # Calculate the standard deviation with another loop
-        stdTemp = np.array([0., 0., 0.])
-        self.std = np.array([0., 0., 0.])
-        if num_samples > 0 and calculate_mean_std:
-            self.mean = self.mean / num_samples
-            for image in images:
-                for j in range(3):
-                    stdTemp[j] += (((image[:, :, j] - self.mean[j]) ** 2).sum() /
-                                   (image.shape[0] * image.shape[1]))
-
-            self.std = np.sqrt(stdTemp / num_samples)
-
         # Split into testing, training, and validation sets and delete the intermediate folder
         splitfolders.ratio(midpoint_dir, output_dir, seed=42, ratio=partition_ratios)
         if os.path.exists(midpoint_dir):
@@ -137,6 +111,3 @@ class FileProcessor:
 if __name__ == "__main__":
     spectrogram_processor = SpectrogramProcessor()
     processFiles = FileProcessor(spectrogram_processor)
-
-    print(f"Mean of dataset: {processFiles.mean}")
-    print(f"Standard deviation of dataset: {processFiles.std}")

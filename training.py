@@ -22,17 +22,11 @@ class ModelTraining:
                  val_path: str = "processed-data/val",
                  learn_rate: float = 0.001,
                  num_epochs: int = 10,
-                 mean: np.array = None,
-                 std: np.array = None,
                  size: tuple[int, int] = (224, 224),
                  train_batch_size: int = 32,
                  val_batch_size: int = 32,
                  weight_decay: float = 1e-5
                  ):
-        if mean is None:
-            mean = np.array([0.5, 0.5, 0.5])
-        if std is None:
-            std = np.array([0.5, 0.5, 0.5])
 
         # Establish an output directory and create a file to record console output
         self.output_dir = output_dir
@@ -45,8 +39,8 @@ class ModelTraining:
             transforms.Resize(size),
             transforms.ToTensor(),
             transforms.Normalize(
-                mean=mean,
-                std=std,)
+                mean=np.array([0.5, 0.5, 0.5]),
+                std=np.array([0.5, 0.5, 0.5]),)
         ])
 
         train_dataset = torchvision.datasets.ImageFolder(train_path, transform=self.transforms)
