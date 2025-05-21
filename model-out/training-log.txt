@@ -1,0 +1,850 @@
+Epoch 1 Loss: 2.0650 Accuracy: 0.2284 Learning Rate: 0.001000 => 0.000999
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.86      0.15      0.26        39
+        calm       0.68      0.33      0.45        39
+     disgust       0.43      0.15      0.23        39
+     fearful       0.15      1.00      0.27        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.00      0.00      0.00        39
+    surprise       0.00      0.00      0.00        39
+
+    accuracy                           0.22       293
+   macro avg       0.27      0.21      0.15       293
+weighted avg       0.28      0.22      0.16       293
+
+Epoch 2 Loss: 1.7585 Accuracy: 0.3235 Learning Rate: 0.000999 => 0.000996
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.00      0.00      0.00        39
+        calm       0.24      1.00      0.39        39
+     disgust       0.20      0.08      0.11        39
+     fearful       0.00      0.00      0.00        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.11      0.33      0.17        39
+    surprise       0.00      0.00      0.00        39
+
+    accuracy                           0.19       293
+   macro avg       0.07      0.18      0.08       293
+weighted avg       0.07      0.19      0.09       293
+
+Epoch 3 Loss: 1.7110 Accuracy: 0.3435 Learning Rate: 0.000996 => 0.000991
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.22      0.69      0.34        39
+        calm       0.64      0.46      0.54        39
+     disgust       0.38      0.56      0.45        39
+     fearful       1.00      0.13      0.23        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.33      0.40      0.36        20
+         sad       0.00      0.00      0.00        39
+    surprise       0.26      0.36      0.30        39
+
+    accuracy                           0.32       293
+   macro avg       0.35      0.33      0.28       293
+weighted avg       0.36      0.32      0.27       293
+
+Epoch 4 Loss: 1.5948 Accuracy: 0.3967 Learning Rate: 0.000991 => 0.000984
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.73      0.28      0.41        39
+        calm       0.30      0.92      0.46        39
+     disgust       0.69      0.23      0.35        39
+     fearful       0.40      0.54      0.46        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.26      0.45      0.33        20
+         sad       0.25      0.03      0.05        39
+    surprise       0.33      0.46      0.39        39
+
+    accuracy                           0.36       293
+   macro avg       0.37      0.36      0.30       293
+weighted avg       0.38      0.36      0.30       293
+
+Epoch 5 Loss: 1.4727 Accuracy: 0.4298 Learning Rate: 0.000984 => 0.000976
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.39      0.46      0.42        39
+        calm       0.60      0.08      0.14        39
+     disgust       0.55      0.59      0.57        39
+     fearful       0.28      0.56      0.37        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.50      0.05      0.09        20
+         sad       0.07      0.03      0.04        39
+    surprise       0.28      0.74      0.40        39
+
+    accuracy                           0.33       293
+   macro avg       0.33      0.31      0.25       293
+weighted avg       0.32      0.33      0.26       293
+
+Epoch 6 Loss: 1.3999 Accuracy: 0.4603 Learning Rate: 0.000976 => 0.000965
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.82      0.23      0.36        39
+        calm       0.65      0.72      0.68        39
+     disgust       0.47      0.90      0.61        39
+     fearful       0.49      0.69      0.57        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.41      0.45      0.43        20
+         sad       0.50      0.13      0.20        39
+    surprise       0.39      0.77      0.52        39
+
+    accuracy                           0.49       293
+   macro avg       0.47      0.49      0.42       293
+weighted avg       0.47      0.49      0.42       293
+
+Epoch 7 Loss: 1.2953 Accuracy: 0.5144 Learning Rate: 0.000965 => 0.000952
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.42      0.44      0.43        39
+        calm       0.82      0.23      0.36        39
+     disgust       0.35      0.97      0.52        39
+     fearful       0.80      0.10      0.18        39
+       happy       0.12      0.03      0.04        39
+     neutral       0.67      0.10      0.17        20
+         sad       0.38      0.21      0.27        39
+    surprise       0.30      0.74      0.43        39
+
+    accuracy                           0.37       293
+   macro avg       0.48      0.35      0.30       293
+weighted avg       0.47      0.37      0.31       293
+
+Epoch 8 Loss: 1.2749 Accuracy: 0.5248 Learning Rate: 0.000952 => 0.000938
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.91      0.26      0.40        39
+        calm       0.80      0.21      0.33        39
+     disgust       0.73      0.41      0.52        39
+     fearful       0.18      0.95      0.30        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.00      0.00      0.00        20
+         sad       0.00      0.00      0.00        39
+    surprise       0.31      0.28      0.29        39
+
+    accuracy                           0.28       293
+   macro avg       0.36      0.26      0.23       293
+weighted avg       0.39      0.28      0.24       293
+
+Epoch 9 Loss: 1.2217 Accuracy: 0.5318 Learning Rate: 0.000938 => 0.000922
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.51      0.46      0.49        39
+        calm       0.47      0.72      0.57        39
+     disgust       0.47      0.18      0.26        39
+     fearful       0.00      0.00      0.00        39
+       happy       0.00      0.00      0.00        39
+     neutral       0.10      0.80      0.18        20
+         sad       0.17      0.10      0.13        39
+    surprise       0.50      0.03      0.05        39
+
+    accuracy                           0.25       293
+   macro avg       0.28      0.29      0.21       293
+weighted avg       0.29      0.25      0.21       293
+
+Epoch 10 Loss: 1.0995 Accuracy: 0.5754 Learning Rate: 0.000922 => 0.000905
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.92      0.28      0.43        39
+        calm       0.37      1.00      0.54        39
+     disgust       0.48      0.82      0.61        39
+     fearful       0.45      0.77      0.57        39
+       happy       0.38      0.08      0.13        39
+     neutral       0.25      0.05      0.08        20
+         sad       0.35      0.18      0.24        39
+    surprise       0.75      0.23      0.35        39
+
+    accuracy                           0.45       293
+   macro avg       0.49      0.43      0.37       293
+weighted avg       0.51      0.45      0.39       293
+
+Epoch 11 Loss: 1.0168 Accuracy: 0.6129 Learning Rate: 0.000905 => 0.000885
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.86      0.46      0.60        39
+        calm       0.51      0.62      0.56        39
+     disgust       0.94      0.38      0.55        39
+     fearful       0.38      0.79      0.51        39
+       happy       0.50      0.03      0.05        39
+     neutral       0.45      0.25      0.32        20
+         sad       0.21      0.49      0.29        39
+    surprise       0.64      0.36      0.46        39
+
+    accuracy                           0.43       293
+   macro avg       0.56      0.42      0.42       293
+weighted avg       0.57      0.43      0.42       293
+
+Epoch 12 Loss: 0.9568 Accuracy: 0.6242 Learning Rate: 0.000885 => 0.000864
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.56      0.23      0.33        39
+        calm       0.71      0.31      0.43        39
+     disgust       1.00      0.26      0.41        39
+     fearful       0.63      0.31      0.41        39
+       happy       0.15      0.10      0.12        39
+     neutral       0.33      0.20      0.25        20
+         sad       0.75      0.08      0.14        39
+    surprise       0.21      1.00      0.34        39
+
+    accuracy                           0.32       293
+   macro avg       0.54      0.31      0.30       293
+weighted avg       0.56      0.32      0.31       293
+
+Epoch 13 Loss: 0.9233 Accuracy: 0.6696 Learning Rate: 0.000864 => 0.000842
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.71      0.74      0.72        39
+        calm       0.74      0.36      0.48        39
+     disgust       0.71      0.74      0.72        39
+     fearful       0.64      0.59      0.61        39
+       happy       0.44      0.36      0.39        39
+     neutral       0.26      0.90      0.40        20
+         sad       0.32      0.23      0.27        39
+    surprise       0.88      0.59      0.71        39
+
+    accuracy                           0.54       293
+   macro avg       0.59      0.56      0.54       293
+weighted avg       0.61      0.54      0.55       293
+
+Epoch 14 Loss: 0.8755 Accuracy: 0.6757 Learning Rate: 0.000842 => 0.000819
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.58      0.67      0.62        39
+        calm       0.85      0.28      0.42        39
+     disgust       0.49      0.62      0.55        39
+     fearful       0.49      0.72      0.58        39
+       happy       0.67      0.05      0.10        39
+     neutral       0.38      0.60      0.46        20
+         sad       0.54      0.18      0.27        39
+    surprise       0.44      0.92      0.60        39
+
+    accuracy                           0.50       293
+   macro avg       0.55      0.50      0.45       293
+weighted avg       0.57      0.50      0.45       293
+
+Epoch 15 Loss: 0.7437 Accuracy: 0.7323 Learning Rate: 0.000819 => 0.000794
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.88      0.38      0.54        39
+        calm       0.60      0.64      0.62        39
+     disgust       0.72      0.46      0.56        39
+     fearful       0.00      0.00      0.00        39
+       happy       0.24      0.13      0.17        39
+     neutral       0.75      0.30      0.43        20
+         sad       0.20      0.03      0.05        39
+    surprise       0.22      1.00      0.36        39
+
+    accuracy                           0.37       293
+   macro avg       0.45      0.37      0.34       293
+weighted avg       0.43      0.37      0.33       293
+
+Epoch 16 Loss: 0.6551 Accuracy: 0.7690 Learning Rate: 0.000794 => 0.000768
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.97      0.77      0.86        39
+        calm       0.95      0.49      0.64        39
+     disgust       0.47      0.97      0.64        39
+     fearful       0.68      0.64      0.66        39
+       happy       0.58      0.36      0.44        39
+     neutral       0.67      0.50      0.57        20
+         sad       0.46      0.62      0.53        39
+    surprise       0.79      0.69      0.74        39
+
+    accuracy                           0.64       293
+   macro avg       0.70      0.63      0.64       293
+weighted avg       0.70      0.64      0.64       293
+
+Epoch 17 Loss: 0.4970 Accuracy: 0.8213 Learning Rate: 0.000768 => 0.000741
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.76      0.67      0.71        39
+        calm       0.88      0.18      0.30        39
+     disgust       0.67      0.62      0.64        39
+     fearful       0.21      0.97      0.35        39
+       happy       0.57      0.10      0.17        39
+     neutral       0.50      0.15      0.23        20
+         sad       0.00      0.00      0.00        39
+    surprise       0.88      0.38      0.54        39
+
+    accuracy                           0.40       293
+   macro avg       0.56      0.38      0.37       293
+weighted avg       0.56      0.40      0.38       293
+
+Epoch 18 Loss: 0.5573 Accuracy: 0.7995 Learning Rate: 0.000741 => 0.000713
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.85      0.59      0.70        39
+        calm       0.92      0.56      0.70        39
+     disgust       0.88      0.56      0.69        39
+     fearful       0.77      0.59      0.67        39
+       happy       0.37      0.49      0.42        39
+     neutral       0.39      0.70      0.50        20
+         sad       0.62      0.41      0.49        39
+    surprise       0.48      0.90      0.62        39
+
+    accuracy                           0.59       293
+   macro avg       0.66      0.60      0.60       293
+weighted avg       0.68      0.59      0.60       293
+
+Epoch 19 Loss: 0.4008 Accuracy: 0.8631 Learning Rate: 0.000713 => 0.000684
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       1.00      0.31      0.47        39
+        calm       0.44      0.97      0.61        39
+     disgust       1.00      0.56      0.72        39
+     fearful       0.69      0.64      0.67        39
+       happy       0.45      0.26      0.33        39
+     neutral       0.34      0.75      0.47        20
+         sad       0.37      0.28      0.32        39
+    surprise       0.73      0.77      0.75        39
+
+    accuracy                           0.56       293
+   macro avg       0.63      0.57      0.54       293
+weighted avg       0.65      0.56      0.55       293
+
+Epoch 20 Loss: 0.3847 Accuracy: 0.8631 Learning Rate: 0.000684 => 0.000655
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.41      0.90      0.56        39
+        calm       0.66      0.69      0.68        39
+     disgust       0.86      0.15      0.26        39
+     fearful       0.54      0.82      0.65        39
+       happy       0.44      0.31      0.36        39
+     neutral       0.29      0.65      0.40        20
+         sad       0.67      0.15      0.25        39
+    surprise       1.00      0.51      0.68        39
+
+    accuracy                           0.52       293
+   macro avg       0.61      0.52      0.48       293
+weighted avg       0.63      0.52      0.49       293
+
+Epoch 21 Loss: 0.3195 Accuracy: 0.8823 Learning Rate: 0.000655 => 0.000624
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.94      0.44      0.60        39
+        calm       0.60      0.85      0.70        39
+     disgust       0.76      0.74      0.75        39
+     fearful       0.83      0.38      0.53        39
+       happy       0.35      0.59      0.44        39
+     neutral       0.48      0.50      0.49        20
+         sad       0.39      0.56      0.46        39
+    surprise       1.00      0.54      0.70        39
+
+    accuracy                           0.58       293
+   macro avg       0.67      0.58      0.58       293
+weighted avg       0.68      0.58      0.59       293
+
+Epoch 22 Loss: 0.3202 Accuracy: 0.8867 Learning Rate: 0.000624 => 0.000594
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.92      0.59      0.72        39
+        calm       0.42      0.92      0.58        39
+     disgust       0.49      0.87      0.63        39
+     fearful       0.68      0.59      0.63        39
+       happy       0.53      0.21      0.30        39
+     neutral       0.26      0.35      0.30        20
+         sad       0.44      0.21      0.28        39
+    surprise       0.95      0.46      0.62        39
+
+    accuracy                           0.54       293
+   macro avg       0.59      0.52      0.51       293
+weighted avg       0.61      0.54      0.52       293
+
+Epoch 23 Loss: 0.2187 Accuracy: 0.9224 Learning Rate: 0.000594 => 0.000563
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.75      0.77      0.76        39
+        calm       0.62      0.82      0.70        39
+     disgust       0.64      0.90      0.74        39
+     fearful       0.69      0.62      0.65        39
+       happy       0.45      0.74      0.56        39
+     neutral       0.56      0.50      0.53        20
+         sad       0.50      0.10      0.17        39
+    surprise       1.00      0.51      0.68        39
+
+    accuracy                           0.63       293
+   macro avg       0.65      0.62      0.60       293
+weighted avg       0.65      0.63      0.60       293
+
+Epoch 24 Loss: 0.1423 Accuracy: 0.9547 Learning Rate: 0.000563 => 0.000531
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       1.00      0.59      0.74        39
+        calm       0.53      0.82      0.65        39
+     disgust       0.85      0.72      0.78        39
+     fearful       0.61      0.44      0.51        39
+       happy       0.45      0.49      0.47        39
+     neutral       0.75      0.15      0.25        20
+         sad       0.30      0.64      0.41        39
+    surprise       0.95      0.49      0.64        39
+
+    accuracy                           0.57       293
+   macro avg       0.68      0.54      0.56       293
+weighted avg       0.68      0.57      0.58       293
+
+Epoch 25 Loss: 0.0975 Accuracy: 0.9704 Learning Rate: 0.000531 => 0.000500
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.84      0.69      0.76        39
+        calm       0.56      0.92      0.70        39
+     disgust       0.74      0.74      0.74        39
+     fearful       0.83      0.62      0.71        39
+       happy       0.58      0.36      0.44        39
+     neutral       0.42      0.25      0.31        20
+         sad       0.41      0.64      0.50        39
+    surprise       0.91      0.74      0.82        39
+
+    accuracy                           0.65       293
+   macro avg       0.66      0.62      0.62       293
+weighted avg       0.68      0.65      0.64       293
+
+Epoch 26 Loss: 0.0863 Accuracy: 0.9791 Learning Rate: 0.000500 => 0.000469
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.89      0.44      0.59        39
+        calm       0.54      0.95      0.69        39
+     disgust       0.83      0.51      0.63        39
+     fearful       0.74      0.51      0.61        39
+       happy       0.40      0.51      0.45        39
+     neutral       0.45      0.45      0.45        20
+         sad       0.55      0.31      0.39        39
+    surprise       0.60      0.97      0.75        39
+
+    accuracy                           0.59       293
+   macro avg       0.63      0.58      0.57       293
+weighted avg       0.64      0.59      0.58       293
+
+Epoch 27 Loss: 0.0716 Accuracy: 0.9765 Learning Rate: 0.000469 => 0.000437
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.82      0.79      0.81        39
+        calm       0.64      0.82      0.72        39
+     disgust       0.76      0.82      0.79        39
+     fearful       0.71      0.62      0.66        39
+       happy       0.41      0.64      0.50        39
+     neutral       0.45      0.25      0.32        20
+         sad       0.64      0.36      0.46        39
+    surprise       0.91      0.82      0.86        39
+
+    accuracy                           0.67       293
+   macro avg       0.67      0.64      0.64       293
+weighted avg       0.68      0.67      0.66       293
+
+Epoch 28 Loss: 0.0383 Accuracy: 0.9904 Learning Rate: 0.000437 => 0.000406
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.87      0.67      0.75        39
+        calm       0.62      0.85      0.72        39
+     disgust       0.78      0.90      0.83        39
+     fearful       0.62      0.72      0.67        39
+       happy       0.67      0.62      0.64        39
+     neutral       0.62      0.40      0.48        20
+         sad       0.55      0.41      0.47        39
+    surprise       0.81      0.87      0.84        39
+
+    accuracy                           0.70       293
+   macro avg       0.69      0.68      0.68       293
+weighted avg       0.70      0.70      0.69       293
+
+Epoch 29 Loss: 0.0360 Accuracy: 0.9895 Learning Rate: 0.000406 => 0.000376
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.97      0.72      0.82        39
+        calm       0.64      0.90      0.74        39
+     disgust       0.73      0.85      0.79        39
+     fearful       0.80      0.82      0.81        39
+       happy       0.73      0.41      0.52        39
+     neutral       0.50      0.35      0.41        20
+         sad       0.48      0.59      0.53        39
+    surprise       0.82      0.85      0.84        39
+
+    accuracy                           0.71       293
+   macro avg       0.71      0.68      0.68       293
+weighted avg       0.72      0.71      0.70       293
+
+Epoch 30 Loss: 0.0212 Accuracy: 0.9948 Learning Rate: 0.000376 => 0.000345
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.90      0.67      0.76        39
+        calm       0.69      0.87      0.77        39
+     disgust       0.69      0.85      0.76        39
+     fearful       0.74      0.72      0.73        39
+       happy       0.66      0.54      0.59        39
+     neutral       0.58      0.55      0.56        20
+         sad       0.46      0.46      0.46        39
+    surprise       0.87      0.87      0.87        39
+
+    accuracy                           0.70       293
+   macro avg       0.70      0.69      0.69       293
+weighted avg       0.71      0.70      0.70       293
+
+Epoch 31 Loss: 0.0207 Accuracy: 0.9913 Learning Rate: 0.000345 => 0.000316
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.84      0.69      0.76        39
+        calm       0.72      0.79      0.76        39
+     disgust       0.76      0.79      0.78        39
+     fearful       0.66      0.64      0.65        39
+       happy       0.55      0.72      0.62        39
+     neutral       0.71      0.50      0.59        20
+         sad       0.57      0.64      0.60        39
+    surprise       0.90      0.69      0.78        39
+
+    accuracy                           0.70       293
+   macro avg       0.71      0.68      0.69       293
+weighted avg       0.71      0.70      0.70       293
+
+Epoch 32 Loss: 0.0149 Accuracy: 0.9956 Learning Rate: 0.000316 => 0.000287
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.85      0.72      0.78        39
+        calm       0.78      0.79      0.78        39
+     disgust       0.79      0.79      0.79        39
+     fearful       0.64      0.74      0.69        39
+       happy       0.70      0.59      0.64        39
+     neutral       0.68      0.65      0.67        20
+         sad       0.50      0.59      0.54        39
+    surprise       0.92      0.90      0.91        39
+
+    accuracy                           0.73       293
+   macro avg       0.73      0.72      0.73       293
+weighted avg       0.74      0.73      0.73       293
+
+Epoch 33 Loss: 0.0091 Accuracy: 0.9974 Learning Rate: 0.000287 => 0.000259
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.77      0.77      0.77        39
+        calm       0.63      0.85      0.73        39
+     disgust       0.80      0.82      0.81        39
+     fearful       0.70      0.67      0.68        39
+       happy       0.62      0.62      0.62        39
+     neutral       0.50      0.40      0.44        20
+         sad       0.60      0.54      0.57        39
+    surprise       0.97      0.87      0.92        39
+
+    accuracy                           0.71       293
+   macro avg       0.70      0.69      0.69       293
+weighted avg       0.71      0.71      0.71       293
+
+Epoch 34 Loss: 0.0051 Accuracy: 0.9991 Learning Rate: 0.000259 => 0.000232
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.94      0.74      0.83        39
+        calm       0.81      0.74      0.77        39
+     disgust       0.81      0.90      0.85        39
+     fearful       0.66      0.74      0.70        39
+       happy       0.75      0.54      0.63        39
+     neutral       0.60      0.60      0.60        20
+         sad       0.53      0.67      0.59        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.74       293
+   macro avg       0.75      0.74      0.74       293
+weighted avg       0.76      0.74      0.74       293
+
+Epoch 35 Loss: 0.0038 Accuracy: 0.9991 Learning Rate: 0.000232 => 0.000206
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.91      0.74      0.82        39
+        calm       0.75      0.77      0.76        39
+     disgust       0.83      0.77      0.80        39
+     fearful       0.69      0.69      0.69        39
+       happy       0.59      0.62      0.60        39
+     neutral       0.69      0.45      0.55        20
+         sad       0.49      0.69      0.57        39
+    surprise       0.92      0.87      0.89        39
+
+    accuracy                           0.72       293
+   macro avg       0.73      0.70      0.71       293
+weighted avg       0.74      0.72      0.72       293
+
+Epoch 36 Loss: 0.0038 Accuracy: 0.9991 Learning Rate: 0.000206 => 0.000181
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.77      0.77      0.77        39
+        calm       0.76      0.74      0.75        39
+     disgust       0.77      0.87      0.82        39
+     fearful       0.66      0.69      0.68        39
+       happy       0.67      0.62      0.64        39
+     neutral       0.67      0.50      0.57        20
+         sad       0.47      0.49      0.48        39
+    surprise       0.90      0.92      0.91        39
+
+    accuracy                           0.71       293
+   macro avg       0.71      0.70      0.70       293
+weighted avg       0.71      0.71      0.71       293
+
+Epoch 37 Loss: 0.0023 Accuracy: 1.0000 Learning Rate: 0.000181 => 0.000158
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.87      0.69      0.77        39
+        calm       0.79      0.79      0.79        39
+     disgust       0.85      0.87      0.86        39
+     fearful       0.64      0.69      0.67        39
+       happy       0.68      0.59      0.63        39
+     neutral       0.59      0.65      0.62        20
+         sad       0.53      0.59      0.56        39
+    surprise       0.86      0.92      0.89        39
+
+    accuracy                           0.73       293
+   macro avg       0.73      0.73      0.72       293
+weighted avg       0.74      0.73      0.73       293
+
+Epoch 38 Loss: 0.0056 Accuracy: 0.9991 Learning Rate: 0.000158 => 0.000136
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.86      0.77      0.81        39
+        calm       0.81      0.74      0.77        39
+     disgust       0.79      0.85      0.81        39
+     fearful       0.64      0.69      0.67        39
+       happy       0.66      0.59      0.62        39
+     neutral       0.65      0.65      0.65        20
+         sad       0.51      0.56      0.54        39
+    surprise       0.90      0.92      0.91        39
+
+    accuracy                           0.73       293
+   macro avg       0.73      0.72      0.72       293
+weighted avg       0.73      0.73      0.73       293
+
+Epoch 39 Loss: 0.0014 Accuracy: 1.0000 Learning Rate: 0.000136 => 0.000115
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.84      0.69      0.76        39
+        calm       0.78      0.82      0.80        39
+     disgust       0.83      0.90      0.86        39
+     fearful       0.70      0.72      0.71        39
+       happy       0.73      0.49      0.58        39
+     neutral       0.61      0.55      0.58        20
+         sad       0.51      0.67      0.58        39
+    surprise       0.86      0.95      0.90        39
+
+    accuracy                           0.73       293
+   macro avg       0.73      0.72      0.72       293
+weighted avg       0.74      0.73      0.73       293
+
+Epoch 40 Loss: 0.0011 Accuracy: 1.0000 Learning Rate: 0.000115 => 0.000095
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.90      0.72      0.80        39
+        calm       0.78      0.82      0.80        39
+     disgust       0.85      0.90      0.88        39
+     fearful       0.70      0.77      0.73        39
+       happy       0.71      0.56      0.63        39
+     neutral       0.69      0.55      0.61        20
+         sad       0.50      0.62      0.55        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.75       293
+   macro avg       0.75      0.74      0.74       293
+weighted avg       0.76      0.75      0.75       293
+
+Epoch 41 Loss: 0.0013 Accuracy: 1.0000 Learning Rate: 0.000095 => 0.000078
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.85      0.74      0.79        39
+        calm       0.77      0.77      0.77        39
+     disgust       0.81      0.90      0.85        39
+     fearful       0.73      0.69      0.71        39
+       happy       0.68      0.54      0.60        39
+     neutral       0.57      0.65      0.60        20
+         sad       0.52      0.59      0.55        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.73       293
+   macro avg       0.73      0.73      0.73       293
+weighted avg       0.74      0.73      0.73       293
+
+Epoch 42 Loss: 0.0012 Accuracy: 1.0000 Learning Rate: 0.000078 => 0.000062
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.90      0.72      0.80        39
+        calm       0.76      0.87      0.81        39
+     disgust       0.83      0.90      0.86        39
+     fearful       0.69      0.69      0.69        39
+       happy       0.69      0.62      0.65        39
+     neutral       0.60      0.60      0.60        20
+         sad       0.54      0.54      0.54        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.74       293
+   macro avg       0.74      0.74      0.73       293
+weighted avg       0.75      0.74      0.74       293
+
+Epoch 43 Loss: 0.0005 Accuracy: 1.0000 Learning Rate: 0.000062 => 0.000048
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.88      0.74      0.81        39
+        calm       0.75      0.77      0.76        39
+     disgust       0.85      0.87      0.86        39
+     fearful       0.68      0.72      0.70        39
+       happy       0.69      0.64      0.67        39
+     neutral       0.60      0.60      0.60        20
+         sad       0.55      0.56      0.56        39
+    surprise       0.86      0.95      0.90        39
+
+    accuracy                           0.74       293
+   macro avg       0.73      0.73      0.73       293
+weighted avg       0.74      0.74      0.74       293
+
+Epoch 44 Loss: 0.0013 Accuracy: 1.0000 Learning Rate: 0.000048 => 0.000035
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.85      0.74      0.79        39
+        calm       0.76      0.74      0.75        39
+     disgust       0.83      0.90      0.86        39
+     fearful       0.70      0.72      0.71        39
+       happy       0.70      0.59      0.64        39
+     neutral       0.58      0.55      0.56        20
+         sad       0.49      0.56      0.52        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.73       293
+   macro avg       0.72      0.72      0.72       293
+weighted avg       0.73      0.73      0.73       293
+
+Epoch 45 Loss: 0.0006 Accuracy: 1.0000 Learning Rate: 0.000035 => 0.000024
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.86      0.77      0.81        39
+        calm       0.76      0.82      0.79        39
+     disgust       0.83      0.90      0.86        39
+     fearful       0.68      0.72      0.70        39
+       happy       0.72      0.59      0.65        39
+     neutral       0.65      0.55      0.59        20
+         sad       0.51      0.56      0.54        39
+    surprise       0.90      0.95      0.93        39
+
+    accuracy                           0.74       293
+   macro avg       0.74      0.73      0.73       293
+weighted avg       0.75      0.74      0.74       293
+
+Epoch 46 Loss: 0.0005 Accuracy: 1.0000 Learning Rate: 0.000024 => 0.000016
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.85      0.74      0.79        39
+        calm       0.78      0.79      0.78        39
+     disgust       0.81      0.90      0.85        39
+     fearful       0.69      0.69      0.69        39
+       happy       0.72      0.59      0.65        39
+     neutral       0.61      0.55      0.58        20
+         sad       0.51      0.59      0.55        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.74       293
+   macro avg       0.73      0.73      0.73       293
+weighted avg       0.74      0.74      0.74       293
+
+Epoch 47 Loss: 0.0011 Accuracy: 1.0000 Learning Rate: 0.000016 => 0.000009
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.93      0.69      0.79        39
+        calm       0.76      0.87      0.81        39
+     disgust       0.81      0.90      0.85        39
+     fearful       0.67      0.72      0.69        39
+       happy       0.73      0.62      0.67        39
+     neutral       0.71      0.60      0.65        20
+         sad       0.54      0.56      0.55        39
+    surprise       0.86      0.95      0.90        39
+
+    accuracy                           0.75       293
+   macro avg       0.75      0.74      0.74       293
+weighted avg       0.75      0.75      0.75       293
+
+Epoch 48 Loss: 0.0009 Accuracy: 1.0000 Learning Rate: 0.000009 => 0.000004
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.88      0.74      0.81        39
+        calm       0.76      0.82      0.79        39
+     disgust       0.83      0.90      0.86        39
+     fearful       0.70      0.72      0.71        39
+       happy       0.73      0.62      0.67        39
+     neutral       0.67      0.60      0.63        20
+         sad       0.53      0.59      0.56        39
+    surprise       0.88      0.95      0.91        39
+
+    accuracy                           0.75       293
+   macro avg       0.75      0.74      0.74       293
+weighted avg       0.75      0.75      0.75       293
+
+Epoch 49 Loss: 0.0009 Accuracy: 1.0000 Learning Rate: 0.000004 => 0.000001
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.88      0.74      0.81        39
+        calm       0.75      0.85      0.80        39
+     disgust       0.80      0.90      0.84        39
+     fearful       0.71      0.69      0.70        39
+       happy       0.70      0.54      0.61        39
+     neutral       0.60      0.60      0.60        20
+         sad       0.51      0.56      0.54        39
+    surprise       0.88      0.92      0.90        39
+
+    accuracy                           0.73       293
+   macro avg       0.73      0.73      0.72       293
+weighted avg       0.74      0.73      0.73       293
+
+Epoch 50 Loss: 0.0006 Accuracy: 1.0000 Learning Rate: 0.000001 => 0.000000
+Classification Report: 
+              precision    recall  f1-score   support
+
+       angry       0.86      0.77      0.81        39
+        calm       0.75      0.85      0.80        39
+     disgust       0.83      0.90      0.86        39
+     fearful       0.72      0.72      0.72        39
+       happy       0.70      0.59      0.64        39
+     neutral       0.67      0.60      0.63        20
+         sad       0.54      0.56      0.55        39
+    surprise       0.90      0.95      0.93        39
+
+    accuracy                           0.75       293
+   macro avg       0.75      0.74      0.74       293
+weighted avg       0.75      0.75      0.75       293
+
