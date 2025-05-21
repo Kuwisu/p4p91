@@ -22,17 +22,11 @@ class ModelTraining:
                  val_path: str = "processed-data/val",
                  learn_rate: float = 0.001,
                  num_epochs: int = 10,
-                 mean: np.array = None,
-                 std: np.array = None,
                  size: tuple[int, int] = (224, 224),
                  train_batch_size: int = 32,
                  val_batch_size: int = 32,
                  weight_decay: float = 1e-5
                  ):
-        if mean is None:
-            mean = np.array([0.5, 0.5, 0.5])
-        if std is None:
-            std = np.array([0.5, 0.5, 0.5])
 
         # Establish an output directory and create a file to record console output
         self.output_dir = output_dir
@@ -45,8 +39,8 @@ class ModelTraining:
             transforms.Resize(size),
             transforms.ToTensor(),
             transforms.Normalize(
-                mean=mean,
-                std=std,)
+                mean=np.array([0.5, 0.5, 0.5]),
+                std=np.array([0.5, 0.5, 0.5]),)
         ])
 
         train_dataset = torchvision.datasets.ImageFolder(train_path, transform=self.transforms)
@@ -97,7 +91,7 @@ class ModelTraining:
             train_acc = train_acc / self.train_size
             train_loss = train_loss / self.train_size
 
-            train_log = f"Epoch {epoch+1} Loss: {train_loss:.4f} Accuracy: {train_acc:.4f} Learning Rate: {prev_lr:.4f} => {new_lr:.4f}"
+            train_log = f"Epoch {epoch+1} Loss: {train_loss:.4f} Accuracy: {train_acc:.4f} Learning Rate: {prev_lr:.6f} => {new_lr:.6f}"
             eval_log = self.evaluate_model(epoch+1)
 
             print(train_log)
@@ -105,7 +99,9 @@ class ModelTraining:
 
             file = open(log_name, "a")
             file.write(train_log)
+            file.write("\n")
             file.write(eval_log)
+            file.write("\n")
             file.close()
 
         save_path = os.path.join(output_dir, model_name)
